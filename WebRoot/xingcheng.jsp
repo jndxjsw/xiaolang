@@ -9,7 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'project.jsp' starting page</title>
+    <title>My JSP 'xingcheng.jsp' starting page</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -22,35 +22,24 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
   </head>
  <script src="<%=request.getContextPath()%>/js/iscroll.js"  
-    type="text/javascript"></script>   
-<script type="text/javascript">
+    type="text/javascript"></script> 
+  <script type="text/javascript">
  var myScroll;
   function loaded() { 
  	setTimeout(function () { 
- 	myScroll = new iScroll('wrapper2',{ snap: true, momentum: false, hScrollbar: false, vScrollbar: false,hScroll:false}); }, 100); 
+ 	myScroll = new iScroll('wrapper4',{ snap: true, momentum: false, hScrollbar: false, vScrollbar: false,hScroll:false}); }, 100); 
  } 
  window.addEventListener('load', loaded, false); 
  </script>
- <script type="text/javascript">
- var myScroll;
-  function loaded() { 
- 	setTimeout(function () { 
- 	myScroll = new iScroll('wrapper3',{ snap: true, momentum: false, hScrollbar: false, vScrollbar: false,hScroll:false}); }, 100); 
- } 
- window.addEventListener('load', loaded, false); 
- </script>
-<body>
+  <body>
 <div id="top">
 
 </div>
-<div id="wrapper2">
+<div id="wrapper4">
 
 </div>
-<div id="wrapper3">
+<div id="foot">
 
 </div>
-<div id=foot>
-
-</div>
-</body>
+  </body>
 </html>

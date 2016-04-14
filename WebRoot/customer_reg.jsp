@@ -39,9 +39,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</td>
 		</tr>
 		<tr>
-			<td width="70" height="35" align="right">手　机：</td>
 			<td>
-				<s:textfield id="jbPhone" name="jbPhone" cssStyle="width:160px;height:24px;" onblur="checkjbPhone()"/>
+				<s:textfield id="jbPhone" name="jbPhone" cssStyle="width:160px;height:24px;" placeholder="请输入手机" onblur="checkjbPhone()"/>
 			</td>
 			<td align="left" width="30%">  
 	       		<span id="jbPhoneTip"  name="jbPhoneTip">  
@@ -52,8 +51,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
      		 </td>  		
 			</tr>
 			<tr>  
-                <td align="center">短信验证码：</td>  
-                    <td align="left" colspan="2" style="padding-left: 112px;">  
+                 <td align="left" colspan="2" style="padding-left: 112px;" placeholder="短信验证码">  
                      <s:textfield id="SmsCheckCode" name="SmsCheckCode" cssStyle="width:80px;height:24px;" maxLength="4" />  
                       <span><input type="button" id="btnSendCode" name="btnSendCode" value="免费获取验证码" onclick="sendMessage()" /></span>  
                        <span id="SmsCheckCodeTip">  
@@ -64,9 +62,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 </td>  
            </tr>  			
 		<tr>
-			<td width="70" height="35" align="right">密　码：</td>
 			<td>
-				<s:password id="password" name="password"  onblur="checkpassword()"></s:password>
+				<s:password id="password" name="password" placeholder="请输入密码" onblur="checkpassword()"></s:password>
 			</td>
 			 <td align="left" width="30%">  
                             <span id="passwordTip">  
@@ -78,9 +75,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			
 		</tr>
 		<tr>
-			<td width="70" height="35" align="right">确认密码：</td>
 			<td>
-				<s:password name="repassword"  id="passwordRepeat" onblur="checkpasswrodb()"></s:password>
+				<s:password name="repassword"  id="passwordRepeat" placeholder="请确认密码" onblur="checkpasswrodb()"></s:password>
 			</td>
 			 <td align="left" width="30%">  
                             <span id="passwordRepeatTip">  
