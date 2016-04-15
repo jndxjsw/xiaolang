@@ -31,13 +31,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <body>
 <div>
     <div id="zhuce">
-	<s:form id="form1" name="form1" action="/action/customeraction"  method="post"  namespace="/"> 
+	<s:form id="form1" name="form1" action="register"   method="post"  namespace="/"> 
 	<table width="80%" border="0" cellpadding="0" cellspacing="0">
-		<tr>
-			<td colspan="2">
-			<s:fielderror></s:fielderror>
-			</td>
-		</tr>
 		<tr>
 			<td>
 				<s:textfield id="Phone" name="Phone" cssStyle="width:160px;height:24px;" placeholder="请输入手机" onblur="checkjbPhone()"/>
@@ -88,7 +83,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			
 		</tr>
 		<tr>
-		 <input type="submit" value="注册" style="width:50px; height:24px;"/>  
+		  <td><input type="submit" value="注册"></td>
 		 </tr>
 	</table>
 	</s:form>

@@ -2,15 +2,22 @@ package action;
 
 import java.util.Map;
 
-import bean.User;
+import org.springframework.stereotype.Controller;
 
-import com.opensymphony.xwork2.ActionContext;
+import service.CustomerService;
+import service.CustomerRegisterImpl;
+import bean.customer;
+
 import com.opensymphony.xwork2.ActionSupport;
 
 import dao.UserDao;
 
 public class customeraction  extends ActionSupport{
-	  private String phone;
+	  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String phone;
 	  private String password;
 
 	  public String getPassword() {
@@ -26,24 +33,12 @@ public class customeraction  extends ActionSupport{
 	    this.phone = phone;
 	  }
 
-	  public String register() throws Exception{
-	    if(phone==null || password==null)
-	      return ERROR;
-	    
-	    UserDao userdao = new UserDao();
-	    boolean insertSuccess = userdao.insert(phone, password);
-	    if(insertSuccess){
-	      Map session = ActionContext.getContext().getSession();
-	      User user = new User(phone, password);
-	      session.put("phone", user);
-	      return SUCCESS;
-	    }
-	    return ERROR;
-	  }
+	  public String execute() throws Exception {  
+		      customer Customer = new customer();        //创建用户对象  
+		      Customer.setphone(phone);      //设置用户名  
+		      Customer.setPassword(password);        //设置密码  
+		        return "success";  
+		            
+		     }  
 
-	  public String execute() throws Exception{
-	    if(phone==null || password==null)
-	      return ERROR;
-	    return SUCCESS;
-	  }
 	}
