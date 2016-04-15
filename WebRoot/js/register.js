@@ -6,7 +6,7 @@ function trim(str) {
 
 // 手机校验
 function checkjbPhone() {  
-    var jbPhone = document.form1.jbPhone.value;  
+    var jbPhone = document.form1.Phone.value;  
     var re= /(^1[3|5|8][0-9]{9}$)/;  
     if (trim(jbPhone) == "") {  
         document.getElementById("jbPhoneTip").innerHTML = "<font color='red'>× 手机号码不能为空</font>";  
@@ -20,7 +20,7 @@ function checkjbPhone() {
             // 向后台发送处理数据  
             $.ajax({  
                 url : "CustomerAction_checkPhone.action",// 目标地址  
-                data : {jbPhone : jbPhone}, // 目标参数  
+                data : {Phone : Phone}, // 目标参数  
                 type : "POST", // 用POST方式传输  
                 dataType : "text", // 数据格式:text  
                 success : function(data) {  

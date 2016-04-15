@@ -6,7 +6,7 @@ var codeLength = 4;//验证码长度
 
 function sendMessage(){  
     curCount = count;  
-    var jbPhone = document.form1.jbPhone.value; 
+    var jbPhone = document.form1.Phone.value; 
     var jbPhoneTip = $("#jbPhoneTip").text();  
     if (jbPhone != "") {  
         if(jbPhoneTip == "√ 该手机号码可以注册，输入正确" || jbPhoneTip == "√ 手机号码输入正确"){  

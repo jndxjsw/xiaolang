@@ -31,7 +31,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     type="text/javascript"></script>
   <body>
    <s:form  id="form2" name="form2" method="post" namespace="/">  
-       <table id="tb">  
+       <table id="tb"> 
+       <tr>
+        	<td align="center" width="30%">证件类型</td>  
+  		 	<select  id="select" name="select" onblur="jbPhone()">   
+      		<option value="0" >身份证</option>
+      		<option value="1">护照</option>
+  			</select>
+		</tr> 
   		 <tr>  
             <td align="center" width="30%">姓名</td>  
             <td align="center" width="40%">  
@@ -45,6 +52,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 </span>  
             </td>  
           </tr>  
+			<tr>
+        	<td align="center" width="30%">国籍</td> 
+        	<td align="center" width="40%">  
+             <s:textfield name="" id="" cssStyle="width:160px;height:24px;" onblur=""/>  
+             </td>
+			</tr>
   		<tr>
              <td align="center" width="30%">身份证号</td>  
              <td align="center" width="40%">  
